@@ -10,19 +10,30 @@
 <a id="kakao-link-btn" href="javascript:;">
 <img src="http://dn.api1.kage.kakao.co.kr/14/dn/btqa9B90G1b/GESkkYjKCwJdYOkLvIBKZ0/o.jpg"/>
 </a>
+
+
+// 아래의 스크립트는 실제 카카오톡에 표시되는 부분
 <script>
 Kakao.init('ad999314429a72baddb916f541eeef21');
 Kakao.Link.createTalkLink({
 container: '#kakao-link-btn',
 label: '라벨',
 
-webLink: {
-text: '네이버',
-url: 'forgrace.github.io'
+image: {
+src: 'https://cloud.githubusercontent.com/assets/19392792/15363817/02553b54-1d55-11e6-84ec-6bfc34d12f37.jpg',
+width: '280', //이미지의 가로크기
+height: '301' //이미지의 세로크기
+},
+webButton: {
+text: '버튼 텍스트'
 },
 fail: function () {
 alert('KakaoLink is currently only supported in iOS and Android platforms.');
 }
 });
 </script>
+</body>
+</html>
+
+
 
